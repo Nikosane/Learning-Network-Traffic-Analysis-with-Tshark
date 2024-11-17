@@ -35,4 +35,21 @@ This will list all available interfaces, e.g.:
 2. any
 3. lo (Loopback)
 
+---
+
+
+# Step 3: Capture a Few Packets
+Basic Capture
+
+To capture only 5 packets:
+```
+sudo tshark -i enp1s0 -c 5
+```
+Verbose Output
+
+To view detailed information about each packet:
+```
+sudo tshark -i enp1s0 -c 5 -V
+```
+
 Use the interface relevant to your network connection (e.g., enp1s0 for Ethernet or lo for localhost).
