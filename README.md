@@ -53,3 +53,18 @@ sudo tshark -i enp1s0 -c 5 -V
 ```
 
 Use the interface relevant to your network connection (e.g., enp1s0 for Ethernet or lo for localhost).
+
+
+---
+
+
+# Step 4: Save Packets for Later Analysis
+
+To save the captured packets to a file for future analysis:
+```
+sudo tshark -i enp1s0 -c 5 -w sample.pcap
+```
+You can open sample.pcap in Wireshark or analyze it later using tshark:
+```
+tshark -r sample.pcap -V
+```
