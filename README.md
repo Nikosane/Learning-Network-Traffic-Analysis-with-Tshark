@@ -18,3 +18,21 @@ To confirm the installation:
 ```
 tshark -v
 ```
+
+---
+
+
+# Step 2: List Available Interfaces
+
+Before capturing packets, identify your network interfaces:
+```
+tshark -D
+```
+
+This will list all available interfaces, e.g.:
+
+1. enp1s0
+2. any
+3. lo (Loopback)
+
+Use the interface relevant to your network connection (e.g., enp1s0 for Ethernet or lo for localhost).
