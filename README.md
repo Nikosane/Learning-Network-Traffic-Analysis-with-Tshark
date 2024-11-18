@@ -64,6 +64,24 @@ To save the captured packets to a file for future analysis:
 ```
 sudo tshark -i enp1s0 -c 5 -w sample.pcap
 ```
+
+---
+
+# Step 5: Apply Filters
+
+Filters help capture only the traffic you're interested in. Below are some examples:
+Capture DNS Traffic
+```
+sudo tshark -i enp1s0 -c 5 -f "port 53" -V
+```
+Capture HTTP Traffic
+```
+sudo tshark -i enp1s0 -c 5 -f "tcp port 80" -V
+```
+Capture Traffic for a Specific Host
+```
+sudo tshark -i enp1s0 -c 5 -f "host 192.168.1.1" -V
+```
 You can open sample.pcap in Wireshark or analyze it later using tshark:
 ```
 tshark -r sample.pcap -V
