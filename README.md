@@ -86,3 +86,15 @@ You can open sample.pcap in Wireshark or analyze it later using tshark:
 ```
 tshark -r sample.pcap -V
 ```
+
+---
+
+# Tips for Running Tshark
+
+- Use `tshark -D` to identify the correct interface.
+- Run `tshark` with `sudo` if you encounter permissions issues.
+- To avoid using `sudo`, add your user to the `wireshark` group:
+```
+sudo usermod -aG wireshark $USER
+```
+Log out and back in for the change to take effect.
